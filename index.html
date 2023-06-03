@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>weather app</title>
+    
+    <link rel="stylesheet" href="styles.css">
+
+    <script src="https://kit.fontawesome.com/0563b25097.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="header">
+        <nav class="firstNav">
+            <div class="icon">
+                <img src="2.png" width="45px" height="35px">
+                MyweatherApp
+            </div>
+            <div class="search-box">
+                <input type="search" placeholder="search the web">
+                <span class="fa-solid fa-magnifying-glass"></span>
+            </div>
+            <div>
+                <ul class="nav-ul">
+                    <i class="fa-solid fa-right-to-bracket login fa"></i><a class="login" href="#" id="login">Login</a> | <i class="fa-solid fa-user login fa"></i><a class="login" href="#">Register</a>
+                    <div class="arrow-up"></div>
+                    <div class="login-form">
+                        <form>
+                            <label>Username</label>
+                            <div>
+                                <input class="username" type="text" placeholder="username" required/>
+                            </div>
+                            <label>password</label>
+                            <div>
+                                <input class="username" type="password" placeholder="password" required/>
+                            </div>
+                            <div>
+                                <button class="form-submit" type="submit">submit</button>
+                            </div>
+                            <div>
+                                <a class="forgot-password" href="#">forgot your password</a> 
+                            </div>
+                        </form>
+                    </div>
+                    <li class="nav-li"><i class="fa-solid fa-bell"></i></li>
+                    <li class="nav-li"><i class="fa-sharp fa-solid fa-gear fa-lg"></i></li>
+
+                </ul>
+            </div>
+        </nav>
+        <nav class="firstNav">
+            <ul class="nav-ul">
+                <li class="nav-li"><i class="fa-solid fa-bars fa-lg lines"></i></li>
+                <li class="nav-li">MyFeed</li>
+                <li class="nav-li">weather</li>
+                <li class="nav-li">Maps</li>
+                <li class="nav-li">3D Maps</li>
+                <li class="nav-li">Hourely Forcast</li>
+                <li class="nav-li">Montly Forcast</li>
+                <li class="nav-li">Severe Weather</li>
+                <li class="nav-li">Air Quality</li>
+                <li class="nav-li">Record and Averages</li>    
+            </ul>
+        </nav>
+    </div>
+
+    <div class="dropdown">
+        <div class="select">
+            <span class="selected">MyweatherApp</span>
+            <div class="cross"><i class="fa-sharp fa-solid fa-xmark fa-lg"></i></div> 
+        </div>
+        <uL class="menu">
+            <li>My Feed</li>
+            <li>weather</li>
+            <li>Maps</li>
+            <li>3D Maps</li>
+            <li>Hourely Forcast</li>
+            <li>Montly Forcast</li>
+            <li>Severe Weather</li>
+            <li>Air Quality</li>
+            <li>Record and Averages</li>
+        </ul>
+    </div>
+    
+    <div class="root">
+        <div class="upper-div">
+            <div class="first-div">
+                <div class="search2">
+                    <input type="search" placeholder="search for location" id="cityInput">
+                    <button id="searchInput" type="submit">Submit</button>
+                    
+                </div>
+                
+                <div class="scroll-container">
+
+                    <ul class="tabs-box">
+                        <li class="text">Popular</li>
+                        <li class="tab"><div class="cityName"><span class="city">Delhi</span><span class="img"><div class=delhiImg><img id="delhiImg" src=""></div></span><span class="temp delhiTemp">36</span></div></li>
+                        <li class="tab"><div class="cityName"><span class="city">Mumbai</span><span class="img "><div class="delhiImg"><img id="mumbaiImg" src=""></div></span><span class="temp mumbaiTemp">36</span></div></li>
+                        <li class="tab"><div class="cityName"><span class="city">Hyderabad</span><span class="img"><div class="delhiImg"><img id="hyderabadImg" src=""></div></span><span class="temp hyderabadTemp">36</span></div></li>
+                        <li class="tab"><div class="cityName"><span class="city">Bangalore</span><span class="img"><div class="delhiImg"><img id="bangaloreImg" src=""></div></span><span class="temp bangaloreTemp">36</span></div></li> 
+                        <li class="tab"><div class="cityName"><span class="city">kolkata</span><span class="img"><div class="delhiImg"><img id="kolkataImg" src=""></div></span><span class="temp kolkataTemp">36</span></div></li>   
+                    </ul>
+                    <span class="icon1"><i id="left" class="fa-solid fa-angle-left"></i></span>
+                    <span class="icon1"><i id="right" class="fa-solid fa-angle-right"></i></span>
+                </div>
+            </div>
+        </div>
+        <div class="secondDiv">
+            <div class="mainDiv">
+                <div class="secondDiv1">
+
+                    <div class="weatherOver">
+                        <div class="NameCurrLoc">New Delhi</div>
+
+                    <div class="currLocTemp">
+                        <div id="header">
+                            <div class="label">current weather</div>
+                            <div class="label time">bbd</div>
+                            <div class="label date">vfvfd</div>
+                        </div>
+                
+                        <div class="summaryContainer">
+                            <div id="summary">
+                                <img class="summaryImg" id="desImg" src="https://assets.msn.com/weathermapdata/1/static/weather/Icons/taskbar_v8/Condition_Card/Haze.svg">;
+                                <div class="summaryTemp">
+                                    <div id="summaryTemp">36<span class="summarunit">C</span></div>
+                                    <div class="summaryCaption">
+                                        <div id="summaryCaption" >fjsdjfdhfh</div>
+                                        <div class="summaryFeelslike">
+                                            <div class="feels">Feels like</div>
+                                            <div id="summaryFeelslike">as</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tempSummary">
+                            <span id="highTemp">bbb</span>
+                        </div>
+                        <div class="detailContainer">
+                            <div class="detailItem">
+                                <div class="detailItemContainer">
+                                    <div class="details!tem1">
+                                        <span>Air Quality</span>
+                                    </div>
+                                    <div id="airQuality">56</div>
+                                </div>
+                                <div class="detailItemContainer">
+                                    <div class="details!tem1">
+                                        <span>Wind</span>
+                                    </div>
+                                    <div id="wind"></div>
+                                </div>
+                                <div class="detailItemContainer">
+                                    <div class="details!tem1">
+                                        <span>Humidity</span>
+                                    </div>
+                                    <div id="humidity"></div>
+                                    </div>
+                                    <div class="detailItemContainer">
+                                        <div class="details!tem1">
+                                            <span>Visibility</span>
+                                        </div>
+                                        <div id="visibility"></div>
+                                    </div>
+                                    <div class="detailItemContainer">
+                                        <div class="details!tem1">
+                                            <span>Pressure</span>
+                                        </div>
+                                        <div id="pressure"></div>
+                                    </div>
+                                    <div class="detailItemContainer">
+                                        <div class="details!tem1">
+                                            <span>Dew Point</span>
+                                        </div>
+                                        <div id="dew">19&#176</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="weatherMap">
+                        <div class="sunMoon">
+                            <div class="sunMoonheading">
+                                SUN/MOON
+                            </div>
+                            <div id="sunMoon">
+                                <duv class="morning">
+                                    <div class="sunMorning">
+                                        <div class="sunimg">
+                                            <img src="https://assets.msn.com/staticsb/statics/pr-3892921/icons-wc/icons/weather/sun-moon-wc/SunAM.svg">
+                                        </div>
+                                        <div class="sunTitle">
+                                            Sunrise
+                                        </div>
+                                        <div class="sunTime" id="riseTime">
+                                            5:25Am
+                                        </div>
+                                    </div>
+                                    <div class="sunRoute"></div>
+                                    <div class="sunMorning">
+                                        <div class="sunimg">
+                                            <img src="https://assets.msn.com/staticsb/statics/pr-3892921/icons-wc/icons/weather/sun-moon-wc/SunPM.svg">
+                                        </div>
+                                        <div class="sunTitle">
+                                            Sunset
+                                        </div>
+                                        <div class="sunTime" id="setTime">
+                                            5:25am
+                                        </div>
+                                    </div>
+                                </duv>
+                                <div class="morning night">
+                                    <div class="sunMorning">
+                                        <div class="sunimg">
+                                            <img src="	https://assets.msn.com/staticsb/statics/pr-3892921/icons-wc/icons/weather/sun-moon-wc/MoonAM.svg">
+                                        </div>
+                                        <div class="sunTitle">
+                                            Moonrise
+                                        </div>
+                                        <div class="sunTime">
+                                            3:34pm
+                                        </div>
+                                    </div>
+                                    <div class="sunRoute"></div>
+                                    <div class="sunMorning">
+                                        <div class="sunimg">
+                                            <img src="https://assets.msn.com/staticsb/statics/pr-3892921/icons-wc/icons/weather/sun-moon-wc/MoonPM.svg">
+                                        </div>
+                                        <div class="sunTitle">
+                                            Moonset
+                                        </div>
+                                        <div class="sunTime">
+                                            2:57am
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div></div>
+                </div>
+                <div class="weatherForcast">
+                    <div class="weatherForcast1">
+                        <div class="forcastTitle">7 DAY'S FORCAST</div>
+                        <div class="forcastDays">
+                            <ul class="cardContainer">
+                                <li>
+                                    <div class="li">
+                                        <span class="days10">
+                                            <div class="forcast10">
+                                                <p id="day1">sat 27</p>
+                                                <div class="iconForcast">
+                                                    <img id="today1Icon" src="">
+                                                </div>
+                                                <div class="tempForcast">
+                                                    <div class="tempForcast1" id="day1Max">36</div>
+                                                    <div class="tempForcast1" id="day1Min">25</div>
+                                                </div>
+                                            </div>
+                                        </span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="li">
+                                        <span class="days10">
+                                            <div class="forcast10">
+                                                <p id="day2">sat 27</p>
+                                                <div class="iconForcast">
+                                                    <img id="today2Icon" src="">
+                                                </div>
+                                                <div class="tempForcast">
+                                                    <div class="tempForcast1" id="day2Max">36</div>
+                                                    <div class="tempForcast1" id="day2Min">25</div>
+                                                </div>
+                                            </div>
+                                        </span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="li">
+                                        <span class="days10">
+                                            <div class="forcast10">
+                                                <p id="day3">sat 27</p>
+                                                <div class="iconForcast">
+                                                    <img id="today3Icon" src="">
+                                                </div>
+                                                <div class="tempForcast">
+                                                    <div class="tempForcast1" id="day3Max">36</div>
+                                                    <div class="tempForcast1" id="day3Min">25</div>
+                                                </div>
+                                            </div>
+                                        </span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="li">
+                                        <span class="days10">
+                                            <div class="forcast10">
+                                                <p id="day4">sat 27</p>
+                                                <div class="iconForcast">
+                                                    <img id="today4Icon" src="">
+                                                </div>
+                                                <div class="tempForcast">
+                                                    <div class="tempForcast1" id="day4Max">36</div>
+                                                    <div class="tempForcast1" id="day4Min">25</div>
+                                                </div>
+                                            </div>
+                                        </span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="li">
+                                        <span class="days10">
+                                            <div class="forcast10">
+                                                <p id="day5">sat 27</p>
+                                                <div class="iconForcast">
+                                                    <img id="today5Icon" src="">
+                                                </div>
+                                                <div class="tempForcast">
+                                                    <div class="tempForcast1" id="day5Max">36</div>
+                                                    <div class="tempForcast1" id="day5Min">25</div>
+                                                </div>
+                                            </div>
+                                        </span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="li">
+                                        <span class="days10">
+                                            <div class="forcast10">
+                                                <p id="day6">sat 27</p>
+                                                <div class="iconForcast">
+                                                    <img id="today6Icon" src="">
+                                                </div>
+                                                <div class="tempForcast">
+                                                    <div class="tempForcast1" id="day6Max">36</div>
+                                                    <div class="tempForcast1" id="day6Min">25</div>
+                                                </div>
+                                            </div>
+                                        </span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="li">
+                                        <span class="days10">
+                                            <div class="forcast10">
+                                                <p id="day7">sat 27</p>
+                                                <div class="iconForcast">
+                                                    <img id="today7Icon" src="">
+                                                </div>
+                                                <div class="tempForcast">
+                                                    <div class="tempForcast1" id="day7Max">36</div>
+                                                    <div class="tempForcast1" id="day7Min">25</div>
+                                                </div>
+                                            </div>
+                                        </span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>   
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="script.js" charset="utf-8"></script>    
+
+</body>
+</html>
+
